@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-#     Copyright (C) 2013 Tristan Fischer (sphere@dersphere.de)
+#     Copyright (C) 2013 Nicolas Guitton (nicog.035@gmail.com)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -37,12 +37,8 @@ class Screensaver(xbmcgui.WindowXMLDialog):
 
     def onInit(self):
         self.exit_monitor = self.ExitMonitor(self.exit)
-        self.handle_settings()
 
     def exit(self):
-        self.abort_requested = True
-        self.exit_monitor = None
-        self.log('exit')
         self.close()
 
     def log(self, msg):
@@ -51,7 +47,7 @@ class Screensaver(xbmcgui.WindowXMLDialog):
 
 if __name__ == '__main__':
     screensaver = Screensaver(
-        'script-%s-main.xml' % addon_name,
+        'script-main.xml',
         addon_path,
         'default',
     )
