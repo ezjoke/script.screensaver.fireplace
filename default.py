@@ -17,11 +17,12 @@
 #    along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
+import sys
 import xbmcaddon
 import xbmcgui
 import xbmc
 
-addon = xbmcaddon.Addon()
+addon = xbmcaddon.Addon('script.screensaver.fireplace')
 addon_name = addon.getAddonInfo('name')
 addon_path = addon.getAddonInfo('path')
 
@@ -39,6 +40,9 @@ class Screensaver(xbmcgui.WindowXMLDialog):
         self.exit_monitor = self.ExitMonitor(self.exit)
 
     def exit(self):
+        self.abort_requested = True
+        self.exit_monitor = None
+        self.log('exit')
         self.close()
 
     def log(self, msg):

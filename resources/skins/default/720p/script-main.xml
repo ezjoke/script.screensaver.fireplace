@@ -1,12 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<window type="window">
+<window>
     <controls>
-        <control type="largeimage">
-            <description>Fireplace</description>
+        <control type="image">
+            <description>Epic Background</description>
             <posx>0</posx>
             <posy>0</posy>
             <width>1280</width>
             <height>720</height>
+            <texture>pacific_rim.jpg</texture>
+        </control>
+        <control type="image">
+            <description>Fireplace</description>
+            <posx>320</posx>
+            <posy>180</posy>
+            <width>640</width>
+            <height>360</height>
             <texture>fireplace.gif</texture>
         </control>
     </controls>
